@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-app>
+            <v-toolbar app color="primary">
+                <v-toolbar-title>Twinsanity Studios</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                    <v-btn flat v-on:click="toHome">Home</v-btn>
+                    <v-btn flat v-on:click="toGames">Games</v-btn>
+                    <v-btn flat v-on:click="toAbout">About</v-btn>
+                    <v-btn flat v-on:click="toContact">Contact</v-btn>
+                </v-toolbar-items>
+            </v-toolbar>
+            <v-content>
+                <v-container fluid>
+                    <router-view></router-view>
+                </v-container>
+            </v-content>
+            <v-footer app>Footer</v-footer>
+      </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  methods: {
+    toHome: function(){
+      this.$router.push('home')
+    },
+    toGames: function(){
+      this.$router.push('games')
+    },
+    toAbout: function(){
+
+    },
+    toContact: function(){
+
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
