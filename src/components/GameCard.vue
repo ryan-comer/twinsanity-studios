@@ -1,5 +1,5 @@
 <template>
-    <v-card>
+    <v-card height="100%">
         <v-img :src="images.gameImage"/>
         <div class="headline font-weight-light game-title">{{gameTitle}}</div>
         <v-card-text>{{gameDescription}}</v-card-text>

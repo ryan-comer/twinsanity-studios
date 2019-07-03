@@ -3,7 +3,7 @@
         <v-container fluid grid-list-xl>
             <v-layout>
                 <v-flex>
-                    <h1>Games</h1>
+                    <h1 class="display-3">Games</h1>
                 </v-flex>
             </v-layout>
 
@@ -29,6 +29,12 @@ export default {
                     description: "Chess ... but with a twist!  This game is 3D chess where each piece is a monster from Yugioh.  This game puts Yugi against Kaiba to see who the true king of games is!",
                     imageName: "yugioh-chess-image.png",
                     downloadLink: "https://twinsanity-studios-unity-games.s3.amazonaws.com/Yugioh+Chess.zip"
+                },
+                {
+                    title: "One Punch Man: City Defense",
+                    description: "Play as a hero in the world of One Punch Man and defend a city against waves of monsters.  The monsters grow in difficulty as the waves go on, and your hero will gain new abilities.  Defeat the God level threat to stop the monster invasion!",
+                    imageName: "work-in-progress.png",
+                    downloadLink: ""
                 }
             ]
         }

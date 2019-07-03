@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app>
-            <v-toolbar app color="primary">
+            <v-toolbar app color="primary" dark>
                 <v-toolbar-title>Twinsanity Studios</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
@@ -16,7 +16,7 @@
                     <router-view></router-view>
                 </v-container>
             </v-content>
-            <v-footer app>Footer</v-footer>
+            <v-footer app></v-footer>
       </v-app>
   </div>
 </template>
