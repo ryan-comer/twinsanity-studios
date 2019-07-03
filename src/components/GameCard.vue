@@ -1,8 +1,11 @@
 <template>
     <v-card>
         <v-img :src="images.gameImage"/>
-        <v-card-title>{{gameTitle}}</v-card-title>
+        <div class="headline font-weight-light game-title">{{gameTitle}}</div>
         <v-card-text>{{gameDescription}}</v-card-text>
+        <v-card-actions>
+            <v-btn flat :href="downloadLink" color="Primary">Download</v-btn>
+        </v-card-actions>
     </v-card>
 </template>
 
@@ -12,7 +15,8 @@ export default {
     props: [
         "gameTitle",
         "gameDescription",
-        "gameImageName"
+        "gameImageName",
+        "downloadLink"
     ],
     data: function(){
         return{
@@ -23,6 +27,9 @@ export default {
     }
 }
 </script>
-
 <style scoped>
+    .game-title{
+        text-align: center;
+        padding: 10px;
+    }
 </style>

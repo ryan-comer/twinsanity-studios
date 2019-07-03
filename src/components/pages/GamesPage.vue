@@ -9,7 +9,8 @@
 
             <v-layout wrap justify-start>
                 <v-flex md6 v-for="game in games" v-bind:key="game.title">
-                    <gamecard v-bind:gameTitle="game.title" v-bind:gameDescription="game.description" v-bind:gameImageName="game.imageName"/>
+                    <gamecard v-bind:gameTitle="game.title" v-bind:gameDescription="game.description" 
+                    v-bind:gameImageName="game.imageName" v-bind:downloadLink="game.downloadLink"/>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -26,7 +27,8 @@ export default {
                 {
                     title: "Yugioh Chess",
                     description: "Chess ... but with a twist!  This game is 3D chess where each piece is a monster from Yugioh.  This game puts Yugi against Kaiba to see who the true king of games is!",
-                    imageName: "yugioh-chess-image.png"
+                    imageName: "yugioh-chess-image.png",
+                    downloadLink: "https://twinsanity-studios-unity-games.s3.amazonaws.com/Yugioh+Chess.zip"
                 }
             ]
         }
