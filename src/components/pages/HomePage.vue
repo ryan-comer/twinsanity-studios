@@ -6,9 +6,9 @@
                     <h1 class="display-3">Home</h1>
                 </v-flex>
             </v-layout>
-            <v-layout>
+            <v-layout row>
                 <v-flex xs12>
-                    <p>
+                    <p class="body-1">
                         Welcome to Twinsanity Studios!  We are an indie game development company that focuses on one thing ... fun!
                         Feel free to browse the site and check out the games that we've developed.
                     </p>

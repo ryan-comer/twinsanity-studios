@@ -7,8 +7,8 @@
                 </v-flex>
             </v-layout>
 
-            <v-layout wrap justify-start>
-                <v-flex md6 v-for="game in games" v-bind:key="game.title">
+            <v-layout row wrap justify-start>
+                <v-flex xs12 md6 lg4 v-for="game in games" v-bind:key="game.title">
                     <gamecard v-bind:gameTitle="game.title" v-bind:gameDescription="game.description" 
                     v-bind:gameImageName="game.imageName" v-bind:downloadLink="game.downloadLink"/>
                 </v-flex>

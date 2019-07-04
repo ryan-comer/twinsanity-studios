@@ -17,6 +17,10 @@ const routes = [
         component: HomePage
       },
       {
+        path: '',
+        component: HomePage
+      },
+      {
         path: 'games',
         component: GamePage
       }
