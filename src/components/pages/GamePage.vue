@@ -10,7 +10,7 @@
                 <v-img :src='image' max-height="500px" contain></v-img>
             </v-flex>
         </v-layout>
-        <v-layout>
+        <v-layout justify-center>
             <v-flex>
                 <h2 class='display-1'>Leave a Review</h2>
             </v-flex>
