@@ -33,8 +33,6 @@ export default {
                 {
                     title: "One Punch Man: City Defense",
                     description: "Play as a hero in the world of One Punch Man and defend a city against waves of monsters.  The monsters grow in difficulty as the waves go on, and your hero will gain new abilities.  Defeat the God level threat to stop the monster invasion!",
-                    imageName: "work-in-progress.png",
-                    downloadLink: ""
                 }
             ]
         }

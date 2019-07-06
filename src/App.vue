@@ -26,13 +26,13 @@ export default {
   name: 'app',
   methods: {
     toHome: function(){
-      this.$router.push('home')
+      this.$router.push('/home')
     },
     toGames: function(){
-      this.$router.push('games')
+      this.$router.push('/games')
     },
     toAbout: function(){
-
+      this.$router.push('/about')
     },
     toContact: function(){
 
