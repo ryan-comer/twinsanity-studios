@@ -1,25 +1,60 @@
 <template>
   <div id="app">
     <v-app>
-            <v-toolbar app color="primary" dark>
-                <v-toolbar-title>Twinsanity Studios</v-toolbar-title>
-                <v-spacer></v-spacer>
-                <v-toolbar-items>
+        <v-toolbar app color="primary" dark>
+            <v-toolbar-title>Twinsanity Studios</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items class="hidden-sm-and-down">
+                <v-btn flat v-on:click="toHome">Home</v-btn>
+                <v-btn flat v-on:click="toGames">Games</v-btn>
+                <v-btn flat v-on:click="toAbout">About</v-btn>
+                <v-btn flat v-on:click="toContact">Contact</v-btn>
+                <v-btn v-if='!signedIn' flat v-on:click="signIn">Sign In</v-btn>
+                <v-btn v-if='signedIn' flat v-on:click="signOut">Sign Out</v-btn>
+            </v-toolbar-items>
+            <v-menu class="hidden-md-and-up">
+              <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+              <v-list>
+                <v-list-tile>
+                  <v-list-tile-content>
                     <v-btn flat v-on:click="toHome">Home</v-btn>
-                    <v-btn flat v-on:click="toGames">Games</v-btn>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-content>
+                    <v-btn flat v-on:click="toGames">Games</v-btn>                    
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-content>
                     <v-btn flat v-on:click="toAbout">About</v-btn>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-content>
                     <v-btn flat v-on:click="toContact">Contact</v-btn>
-                    <v-btn v-if='!signedIn' flat v-on:click="signIn">Sign In</v-btn>
-                    <v-btn v-if='signedIn' flat v-on:click="signOut">Sign Out</v-btn>
-                </v-toolbar-items>
-            </v-toolbar>
-            <v-content>
-                <v-container fluid>
-                    <router-view></router-view>
-                </v-container>
-            </v-content>
-            <v-footer app></v-footer>
-      </v-app>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile v-if='!signedIn'>
+                  <v-list-tile-content>
+                    <v-btn flat v-on:click="signIn">Sign In</v-btn>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile v-if='signedIn'>
+                  <v-list-tile-content>
+                    <v-btn flat v-on:click="signOut">Sign Out</v-btn>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+            </v-menu>
+        </v-toolbar>
+      <v-content>
+          <v-container fluid>
+              <router-view></router-view>
+          </v-container>
+      </v-content>
+      <v-footer app></v-footer>
+    </v-app>
   </div>
 </template>
 
