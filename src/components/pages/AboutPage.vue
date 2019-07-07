@@ -11,7 +11,7 @@
                 </v-flex>
             </v-layout>
             <v-layout>
-                <v-flex xs12 md6 v-for="member in teamMembers" v-bind:key="member.name">
+                <v-flex xs12 sm10 md6 v-for="member in teamMembers" v-bind:key="member.name">
                     <personcard v-bind:name='member.name' v-bind:description='member.description'
                         v-bind:roles='member.roles' v-bind:imageName='member.imageName'/>
                 </v-flex>
