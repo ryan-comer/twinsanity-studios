@@ -16,22 +16,22 @@
             </v-flex>
         </v-layout>
         <v-layout justify-space-around row wrap>
-            <v-flex xs5>
+            <v-flex xs12 sm5>
                 <v-layout ma-0 pa-0>
                     <v-flex xs12 ma-0 pa-0>
                         <v-textarea v-model='reviewText' box></v-textarea>
                     </v-flex>
                 </v-layout>
-                <v-layout justify-start ma-0 pa-0>
-                    <v-flex xs5>
+                <v-layout justify-start ma-0 pa-0 row wrap>
+                    <v-flex xs12 lg5>
                         <v-rating v-model='reviewRating'></v-rating>
                     </v-flex>
-                    <v-flex xs1>
+                    <v-flex xs12 lg1>
                         <v-btn v-on:click='submitReview'>Submit</v-btn>
                     </v-flex>
                 </v-layout>
             </v-flex>
-            <v-flex xs4>
+            <v-flex xs12 sm4>
                 <v-layout column class='reviewslist' justify-start align-content-center>
                     <v-flex xs1 class='reviewitem' ma-1 v-for="review in reviews" v-bind:key="review.userName.S + review.date.N">
                         <v-layout justify-start pab-0 mab-0>
