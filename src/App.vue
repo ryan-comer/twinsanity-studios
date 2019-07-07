@@ -24,6 +24,14 @@
 </template>
 
 <script>
+// Set up AWS
+const AWS = require('aws-sdk')
+// Default credentials
+AWS.config.region = 'us-east-1';
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: 'us-east-1:ae3d8f3d-bb06-403f-a0fb-c94d857d55e6',
+});
+
 export default {
   name: 'app',
   methods: {
@@ -52,14 +60,46 @@ export default {
     signedInStatusChanged: function(newValue){
       this.signedIn = newValue;
       localStorage.signedIn = newValue;
+
+      if(newValue){
+        var auth = gapi.auth2.getAuthInstance();
+        var authResponse = auth.currentUser.get().getAuthResponse(true);
+        
+        // Authorized access
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'us-east-1:ae3d8f3d-bb06-403f-a0fb-c94d857d55e6',
+            Logins: {
+                'accounts.google.com': authResponse.id_token
+            }
+        });
+      }else{
+        // Unauthorized access
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'us-east-1:ae3d8f3d-bb06-403f-a0fb-c94d857d55e6',
+        });
+      }
     },
     onGapiInit: function(auth){
       this.signedIn = auth.isSignedIn.get();
       auth.isSignedIn.listen(this.signedInStatusChanged);
+
+      // User is signed in, set up credentials
+      if(this.signedIn){
+        var authResponse = auth.currentUser.get().getAuthResponse(true);
+
+        // Authorized access
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'us-east-1:ae3d8f3d-bb06-403f-a0fb-c94d857d55e6',
+            Logins: {
+                'accounts.google.com': authResponse.id_token
+            }
+        });
+      }
     },
     onGapiLoaded: function(){
       gapi.auth2.init({
         client_id: '689873811630-qijrosv4n3pnj7i41vs78v13v40vu892.apps.googleusercontent.com'
+        
       }).then(this.onGapiInit, function(){
         // Error
         console.error("Error initializing gapi");
@@ -71,8 +111,7 @@ export default {
       signedIn: false
     }
   },
-  mounted(){
-    // Check if user is signed in
+  created(){
     gapi.load('auth2', this.onGapiLoaded);
   }
 }
