@@ -106,6 +106,8 @@ export default {
     },
     methods: {
         submitReview: function(){
+            alert("Reviews temporarily disabled");
+            return;
             var auth = gapi.auth2.getAuthInstance();
 
             // Figure out if the user is logged in
