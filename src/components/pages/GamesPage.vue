@@ -31,6 +31,12 @@ export default {
                     downloadLink: "https://twinsanity-studios-unity-games.s3.amazonaws.com/Yugioh+Chess.zip"
                 },
                 {
+                    title: "Rockstar",
+                    description: "Turn any YouTube video into a guitar hero game!  Create your song library by downloading songs, and play those songs by hitting keys on your keyboard at the right time.",
+                    imageName: "rockstar-image.png",
+                    downloadLink: "https://twinsanity-studios-unity-games.s3.amazonaws.com/rockstar_installer.exe"
+                },
+                {
                     title: "One Punch Man: City Defense",
                     description: "Play as a hero in the world of One Punch Man and defend a city against waves of monsters.  The monsters grow in difficulty as the waves go on, and your hero will gain new abilities.  Defeat the God level threat to stop the monster invasion!",
                 }
