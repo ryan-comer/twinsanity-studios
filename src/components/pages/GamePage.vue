@@ -83,6 +83,10 @@ export default {
                 'name': 'Yugioh Chess',
                 'imageName':'yugioh-chess-image.png'
             },
+            'Rockstar' : {
+                'name': 'Rockstar',
+                'imageName': 'rockstar-image.png'
+            },
             'One Punch Man: City Defense': {
                 'name': 'One Punch Man: City Defense'
             }

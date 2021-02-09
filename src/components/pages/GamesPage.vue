@@ -28,13 +28,13 @@ export default {
                     title: "Yugioh Chess",
                     description: "Chess ... but with a twist!  This game is 3D chess where each piece is a monster from Yugioh.  This game puts Yugi against Kaiba to see who the true king of games is!",
                     imageName: "yugioh-chess-image.png",
-                    downloadLink: "https://twinsanity-studios-unity-games.s3.amazonaws.com/Yugioh+Chess.zip"
+                    downloadLink: "https://drive.google.com/uc?export=download&id=1QLIeIafkM34Jd7pSNzFf-mI6VHk6byQ8"
                 },
                 {
                     title: "Rockstar",
                     description: "Turn any YouTube video into a guitar hero game!  Create your song library by downloading songs, and play those songs by hitting keys on your keyboard at the right time.",
                     imageName: "rockstar-image.png",
-                    downloadLink: "https://twinsanity-studios-unity-games.s3.amazonaws.com/rockstar_installer.exe"
+                    downloadLink: "https://drive.google.com/uc?export=download&id=1lh1LlHX9kEXxXTGm8EN3leutyn07Gawb"
                 },
                 {
                     title: "One Punch Man: City Defense",
